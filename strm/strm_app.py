@@ -35,7 +35,7 @@ st.markdown("Hey there! Welcome to my app. This app lets the user try out predic
             " vary any of the parameters to see how they affect the performance. "
             "**Give it a go!**")
 
-with st.expander("Data Information"):
+with st.beta_expander("Data Information"):
     st.markdown("prelimanary analysis data is taken from https://www.kaggle.com/infernape/fast-furious-and-insured")
 st.markdown("")
 
