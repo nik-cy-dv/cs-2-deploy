@@ -99,7 +99,7 @@ ohe = pickle.load(open('pickle/ohe.pkl', 'rb'))
 feature_labels = pickle.load(open('pickle/labels.pkl', 'rb'))
 scaler = pickle.load(open('pickle/scaler.pkl', 'rb'))
 gbdt = pickle.load(open('pickle/imgonly_gbr_model.pkl', 'rb'))
-path = 'cs-2-deploy/model3_img_only.h5'
+path = 'model3_img_only.h5'
 #path = 'D:/data applied ai/ASSIGNMENTS/case study 2/pickle/model3_img_only.hdf5'
 
 
