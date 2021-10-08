@@ -81,3 +81,4 @@ matplotlib==3.4.3
 plotly==4.14.3
 scipy==1.5.2
 opencv == 4.5.3.56
+pip==21.2.4
