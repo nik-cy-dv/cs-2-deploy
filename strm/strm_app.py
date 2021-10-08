@@ -45,7 +45,7 @@ pt = st.text_input('Enter Image URL',)
 
 # Sidebar Content
 
-imag = Image.open('image/motorclaim.jpg')
+imag = Image.open('strm/image/motorclaim.jpg')
 st.sidebar.image(imag, width=280)
 st.sidebar.write('#### Select an image of vehicle to upload or enter url of image on right side')
 uploaded_file = st.sidebar.file_uploader('',
