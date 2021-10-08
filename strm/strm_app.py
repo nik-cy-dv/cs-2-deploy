@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 import datetime
 import tensorflow as tf
 from tensorflow.keras import preprocessing
-from tf.keras.models import load_model, load_weight
+from tf.keras.models import load_model, load_weights
 #import keras
 
 
