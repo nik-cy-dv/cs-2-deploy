@@ -1,4 +1,4 @@
-tensorflow
+tensorflow-cpu==1.15
 altair==4.1.0
 appnope==0.1.2
 argon2-cffi==20.1.0
