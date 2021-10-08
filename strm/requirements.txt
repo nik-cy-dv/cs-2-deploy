@@ -1,4 +1,4 @@
-pip==21.2.4
+
 altair==4.1.0
 appnope==0.1.2
 argon2-cffi==20.1.0
@@ -81,5 +81,5 @@ zipp==3.4.0
 matplotlib==3.4.3
 plotly==4.14.3
 scipy==1.5.2
-opencv==4.5.2 
+opencv-python-headless
 
