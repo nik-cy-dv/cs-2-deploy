@@ -45,7 +45,7 @@ pt = st.text_input('Enter Image URL',)
 
 # Sidebar Content
 
-imag = Image.open('C:/Users/Nik/Desktop/motorclaim.jpg')
+imag = Image.open('image/motorclaim.jpg')
 st.sidebar.image(imag, width=280)
 st.sidebar.write('#### Select an image of vehicle to upload or enter url of image on right side')
 uploaded_file = st.sidebar.file_uploader('',
@@ -92,15 +92,15 @@ import requests
 #from google.colab.patches import cv2_imshow
 
 
-luxury_seg = pickle.load(open('D:/data applied ai/ASSIGNMENTS/case study 2/pickle/luxury_seg.pkl', 'rb'))
-medium_seg = pickle.load(open('D:/data applied ai/ASSIGNMENTS/case study 2/pickle/medium_seg.pkl','rb'))
-cmp_cnt =  pickle.load(open('D:/data applied ai/ASSIGNMENTS/case study 2/pickle/cmp_cnt.pkl','rb'))
-ohe = pickle.load(open('D:/data applied ai/ASSIGNMENTS/case study 2/pickle/ohe.pkl', 'rb'))
-feature_labels = pickle.load(open('D:/data applied ai/ASSIGNMENTS/case study 2/pickle/labels.pkl', 'rb'))
-scaler = pickle.load(open('D:/data applied ai/ASSIGNMENTS/case study 2/pickle/scaler.pkl', 'rb'))
-gbdt = pickle.load(open('D:/data applied ai/ASSIGNMENTS/case study 2/pickle/imgonly_gbr_model.pkl', 'rb'))
+luxury_seg = pickle.load(open('pickle/luxury_seg.pkl', 'rb'))
+medium_seg = pickle.load(open('pickle/medium_seg.pkl','rb'))
+cmp_cnt =  pickle.load(open('pickle/cmp_cnt.pkl','rb'))
+ohe = pickle.load(open('pickle/ohe.pkl', 'rb'))
+feature_labels = pickle.load(open('pickle/labels.pkl', 'rb'))
+scaler = pickle.load(open('pickle/scaler.pkl', 'rb'))
+gbdt = pickle.load(open('pickle/imgonly_gbr_model.pkl', 'rb'))
+path = 'model3_img_only.hdf5'
 #path = 'D:/data applied ai/ASSIGNMENTS/case study 2/pickle/model3_img_only.hdf5'
-path = 'D:/data applied ai/ASSIGNMENTS/case study 2/pickle/model3_img_only.hdf5'
 
 
 def feature_engg(data, col1, col2, col3, col4, col5):
