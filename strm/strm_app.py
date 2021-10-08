@@ -19,7 +19,7 @@ import datetime
 import tensorflow as tf
 from tensorflow import keras 
 from tensorflow.keras import preprocessing
-from tensorflow.keras.models import load_model, load_weights
+from tensorflow.keras.models import load_model #, load_weights
 #import keras
 
 
@@ -152,8 +152,8 @@ def feature_engg(data, col1, col2, col3, col4, col5):
 def model_pred(frame):
   
     
-  #best_model = tf.keras.models.load_model(path) 
-  best_model  = model.load_weights(path)
+  best_model = tf.keras.models.load_model(path) 
+  #best_model  = model.load_weights(path)
   if uploaded_file is not None:
     # User-selected image.
     content = Image.open(uploaded_file)
