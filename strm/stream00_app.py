@@ -106,7 +106,9 @@ feature_labels = pickle.load(open('pickle/labels.pkl', 'rb'))
 scaler = pickle.load(open('pickle/scaler.pkl', 'rb'))
 gbdt = pickle.load(open('pickle/imgonly_gbr_model.pkl', 'rb'))
 #path = 'model3_img_only.hdf5'#'blob/main/model3_deepl.h5'#'cs-2-deploy/blob/main/model3_deepl.h5'
-path = 'cs-2-deploy/blob/e719d60b01fa9e62498084a5f014a57b8d642910/model3_img_only.hdf5'
+#path = 'cs-2-deploy/blob/e719d60b01fa9e62498084a5f014a57b8d642910/model3_img_only.hdf5'
+url = 'https://github.com/nik-cy-dv/cs-2-deploy/blob/main/model3_deepl.h5'
+filename = url.split('/')[-1]
 
 
 def feature_engg(data, col1, col2, col3, col4, col5):
@@ -175,7 +177,8 @@ def model_pred(frame):
     
   #best_model = tf.lite.TFLiteConverter.from_keras_model(p)
   #best_model  = model.load_weights('model3_deepl_wt.h5')
-  best_model  = load_model(path)
+  #best_model  = load_model(path)
+  best_model  = model.load_weights(urllib.request.urlretrieve(url, filename))
   if uploaded_file is not None:
     # User-selected image.
     content = Image.open(uploaded_file)
