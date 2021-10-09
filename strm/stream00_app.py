@@ -152,15 +152,15 @@ def feature_engg(data, col1, col2, col3, col4, col5):
 @st.cache    
 def model_pred(frame):
   
-  p = './model_deepl_3.tflite'
+  p = './model3_deepl.h5e'
   #if not os.path.exists(p):
-  encoder_url = 'wget -O model_deepl_3.tflite https://www.dropbox.com/h?preview=model_deepl_3.tflite'
+  encoder_url = 'wget -O model3_deepl.h5 https://www.dropbox.com/h?preview=model3_deepl.h5'
   with st.spinner('Downloading model weights'):
      os.system(encoder_url)
   #  else:
   #      print("Model 2 is here.")
     
-  best_model = tf.keras.models.load_model(p) 
+  best_model = tf.lite.TFLiteConverter.from_keras_model(p)
   #best_model  = model.load_weights(path)
   if uploaded_file is not None:
     # User-selected image.
