@@ -152,7 +152,7 @@ def feature_engg(data, col1, col2, col3, col4, col5):
 @st.cache(suppress_st_warning=True)
 def model_pred(frame):
   
-  p = './model3_deepl.h5e'
+  p = './model3_deepl.h5'
   #if not os.path.exists(p):
   encoder_url = 'wget -O model3_deepl.h5 https://www.dropbox.com/h?preview=model3_deepl.h5'
   with st.spinner('Downloading model weights'):
