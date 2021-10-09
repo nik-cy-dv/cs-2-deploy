@@ -155,7 +155,7 @@ def model_pred(frame):
   
   #p = './model3_deepl_wt.h5'
   #if not os.path.exists(p):
-  encoder_url = 'wget -O model3_deepl_wt.h5 https://www.dropbox.com/h?preview=model3_deepl_wt.h5'
+  encoder_url = 'wget -O  https://www.dropbox.com/home/deepl_model3'
   with st.spinner('Downloading model weights'):
      os.system(encoder_url)
   #  else:
@@ -163,7 +163,7 @@ def model_pred(frame):
     
   #best_model = tf.lite.TFLiteConverter.from_keras_model(p)
   #best_model  = model.load_weights('model3_deepl_wt.h5')
-  best_model  = load_model('model3_deepl_wt.h5')
+  best_model  = load_model('./deepl_model3')
   if uploaded_file is not None:
     # User-selected image.
     content = Image.open(uploaded_file)
