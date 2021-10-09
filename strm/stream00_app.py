@@ -180,7 +180,9 @@ def model_pred(frame):
   #best_model  = model.load_weights('model3_deepl_wt.h5')
   #best_model  = load_model(path)
   f = urllib.request.urlretrieve(url, filename)
-  best_model  = model.load_weights(filepath = f) #urllib.request.urlretrieve(url, filename))
+  tfp = open(filename, 'wb')
+            
+  best_model  = model.load_weights(tfp)#filepath = f) #urllib.request.urlretrieve(url, filename))
   if uploaded_file is not None:
     # User-selected image.
     content = Image.open(uploaded_file)
