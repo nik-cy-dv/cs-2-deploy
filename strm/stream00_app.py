@@ -154,7 +154,7 @@ def model_pred(frame):
   
   p = './model3_deepl.h5'
   #if not os.path.exists(p):
-  encoder_url = 'wget -O ./model3_deepl.h5 https://doc-0k-a0-docs.googleusercontent.com/docs/securesc/l3mmdrbat86ciratoa2fej9b5b2eksro/tkm02f3bfsm8389n88r6nl93jb0vdf2s/1633766325000/11123127552350836491/11123127552350836491/1-ciTxVZ31O_JS2va5el0f7AMZ9lQYrfB?e=download&authuser=3&nonce=64phihsfs5asa&user=11123127552350836491&hash=681jd1t1o7ffgltn3t4t4lg879q4fu74 -c -O model3_deepl.h5'
+  encoder_url = 'wget -O ./model3_deepl.h5 https://www.dropbox.com/h?preview=model3_deepl.h5'
   with st.spinner('Downloading model weights'):
      os.system(encoder_url)
   #  else:
