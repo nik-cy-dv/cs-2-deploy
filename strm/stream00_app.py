@@ -106,7 +106,7 @@ feature_labels = pickle.load(open('pickle/labels.pkl', 'rb'))
 scaler = pickle.load(open('pickle/scaler.pkl', 'rb'))
 gbdt = pickle.load(open('pickle/imgonly_gbr_model.pkl', 'rb'))
 #path = 'model3_img_only.hdf5'#'blob/main/model3_deepl.h5'#'cs-2-deploy/blob/main/model3_deepl.h5'
-#path = 'cs-2-deploy/blob/e719d60b01fa9e62498084a5f014a57b8d642910/model3_img_only.hdf5'
+path = 'cs-2-deploy/blob/e719d60b01fa9e62498084a5f014a57b8d642910/model3_img_only.hdf5'
 
 
 def feature_engg(data, col1, col2, col3, col4, col5):
@@ -154,9 +154,9 @@ def feature_engg(data, col1, col2, col3, col4, col5):
 @st.cache(suppress_st_warning=True)
 def model_pred(frame):
   
-  p = './model3_deepl.h5'
+  #p = './model3_deepl.h5'
   #if not os.path.exists(p):
-  encoder_url = 'wget -O ./model3_deepl.h5 https://www.dropbox.com/home?preview=model3_deepl.h5'
+  #encoder_url = 'wget -O ./model3_deepl.h5 https://www.dropbox.com/home?preview=model3_deepl.h5'
   
   #cloud_model_location = "1BvZxcH_aO0udEecTXBhyVATBXDQz7YBU"
             
@@ -175,7 +175,7 @@ def model_pred(frame):
     
   #best_model = tf.lite.TFLiteConverter.from_keras_model(p)
   #best_model  = model.load_weights('model3_deepl_wt.h5')
-  best_model  = load_model('./model3_deepl.h5')
+  best_model  = load_model(path)
   if uploaded_file is not None:
     # User-selected image.
     content = Image.open(uploaded_file)
