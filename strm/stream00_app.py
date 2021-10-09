@@ -161,7 +161,7 @@ def model_pred(frame):
   #      print("Model 2 is here.")
     
   #best_model = tf.lite.TFLiteConverter.from_keras_model(p)
-  best_model  = tf.keras.model.load_weights(p)
+  best_model  = model.load_weights(p)
   if uploaded_file is not None:
     # User-selected image.
     content = Image.open(uploaded_file)
