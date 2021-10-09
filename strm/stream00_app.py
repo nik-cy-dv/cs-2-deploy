@@ -21,6 +21,7 @@ import tensorflow as tf
 from tensorflow import keras 
 from tensorflow.keras import preprocessing
 from tensorflow.keras.models import load_model #, load_weights
+from tensorflow.keras import Model as model
 #import keras
 
 
