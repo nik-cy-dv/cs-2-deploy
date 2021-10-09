@@ -149,7 +149,7 @@ def feature_engg(data, col1, col2, col3, col4, col5):
   return data
 
     
-@st.cache    
+@st.cache(suppress_st_warning=True)
 def model_pred(frame):
   
   p = './model3_deepl.h5e'
